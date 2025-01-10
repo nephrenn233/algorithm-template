@@ -1,4 +1,3 @@
-// 0-indexed
 template <typename T>
 struct Fenwick {
 private:

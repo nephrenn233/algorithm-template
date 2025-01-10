@@ -1,5 +1,4 @@
 class DSU {
-// 1-indexed
 private:
     std::vector<int> f, sz;
 public:
@@ -9,10 +8,9 @@ public:
     }
 
     void init (int _n) {
-        f.resize(_n + 1);
+        f.resize(_n);
         std::iota(f.begin(), f.end(), 0);
-        sz.assign(_n + 1, 1);
-        sz[0] = 0;
+        sz.assign(_n, 1);
     }
 
     int find (int x) {
