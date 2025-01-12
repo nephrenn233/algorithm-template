@@ -11,23 +11,21 @@
 
 ### 数据结构 data structure
 
-+ 树状数组 (fenwick-tree.cpp)，支持单点修改、前缀和查询
-+ 并查集 (disjoint-set-union.cpp)，支持查询集合、查询集合大小、合并
-+ 莫队
-    + 普通莫队 (mo.cpp)
++ 树状数组 (fenwick_tree.cpp)，支持单点修改、前缀和查询
++ 并查集 (disjoint_set_union.cpp)，支持查询集合、查询集合大小、合并
 
 ### 数学 math
 
-+ 组合数 (binom.cpp, with mod-int.cpp)
++ 组合数 (binom.cpp, with mod_int.cpp)
 + 卢卡斯定理 (lucas.cpp, with binom.cpp)
-+ 线性筛素数 (prime-sieve.cpp)
-+ 线性求逆元 (1-n-inverse.cpp)
++ 线性筛素数 (prime_sieve.cpp)
++ 线性求逆元 (1_to_n_inverse.cpp)
 + 线性基 (basis.cpp)
 
 ### 字符串 string
 
 + Manacher 算法 (manacher.cpp)
-+ 字符串哈希 (string-hash.cpp)
++ 字符串哈希 (string_hash.cpp)
 
 ### 图论 graph theory
 
@@ -37,3 +35,5 @@
 + 大整数类 (big_int.cpp)，支持高精加，高精减，高精乘 int
 + 对拍 (duipai.cpp)
 + 快速幂 (quick_pow.cpp)
++ 莫队
+    + 普通莫队 (mo.cpp)
