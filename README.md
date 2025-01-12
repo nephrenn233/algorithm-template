@@ -13,7 +13,7 @@
 
 + 树状数组 (fenwick_tree.cpp)，支持单点修改、前缀和查询
 + 并查集 (disjoint_set_union.cpp)，支持查询集合、查询集合大小、合并
-+ 线段树 (with Info)
++ 线段树
     + 区间加，单点改 (segment_tree_1.cpp)
 
 ### 数学 math
