@@ -39,3 +39,4 @@
 + 快速幂 (quick_pow.cpp)
 + 莫队
     + 普通莫队 (mo.cpp)
++ 分数类 (frac.cpp)
