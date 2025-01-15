@@ -34,7 +34,7 @@
 ### 杂项 various
 
 + 取模类 (mod_int.cpp)
-+ 大整数类 (big_int.cpp)，支持高精加，高精减，高精乘 int
++ 大整数类 (big_int.cpp)，支持高精加，高精减，高精乘，高精除，高精模
 + 对拍 (duipai.cpp)
 + 快速幂 (quick_pow.cpp)
 + 莫队
