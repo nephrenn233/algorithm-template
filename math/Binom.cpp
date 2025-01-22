@@ -1,17 +1,38 @@
-constexpr int N = 1e5;
-constexpr i64 P = 1e9 + 7;
-typedef ModInt<P> Z;
-Z fac[N + 10], ifac[N + 10];
-void init () {
-    fac[0] = 1;
-    for (int i = 1; i <= N; ++i) {
-        fac[i] = fac[i - 1] * Z(i);
+struct Comb {
+    int n;
+    std::vector<Z> _fac;
+    std::vector<Z> _invfac;
+    
+    Comb() : n{0}, _fac{1}, _invfac{1} {}
+    Comb(int n) : Comb() {
+        init(n);
     }
-    ifac[N] = ModInt<P>::inv(fac[N]);
-    for (int i = N - 1; i >= 0; --i) {
-        ifac[i] = ifac[i + 1] * Z(i + 1);
+    
+    void init(int m) {
+        if (m <= n) return;
+        _fac.resize(m + 1);
+        _invfac.resize(m + 1);
+        
+        for (int i = n + 1; i <= m; i++) {
+            _fac[i] = _fac[i - 1] * i;
+        }
+        _invfac[m] = _fac[m].inv();
+        for (int i = m; i > n; i--) {
+            _invfac[i - 1] = _invfac[i] * i;
+        }
+        n = m;
     }
-}
-Z binom (int n, int m) {
-    return fac[n] * ifac[m] * ifac[n - m];
-}
+    
+    Z fac(int m) {
+        if (m > n) init(2 * m);
+        return _fac[m];
+    }
+    Z invfac(int m) {
+        if (m > n) init(2 * m);
+        return _invfac[m];
+    }
+    Z binom(int n, int m) {
+        if (n < m || m < 0) return 0;
+        return fac(n) * invfac(m) * invfac(n - m);
+    }
+} comb;

@@ -19,7 +19,7 @@
 
 ### 数学 math
 
-+ 组合数 (binom.cpp, with mod_int.cpp)
++ 组合数 (comb.cpp, with mod_int.cpp)
 + 卢卡斯定理 (lucas.cpp, with binom.cpp)
 + 线性筛素数 (prime_sieve.cpp)
 + 线性求逆元 (1_to_n_inverse.cpp)
