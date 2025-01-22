@@ -24,6 +24,7 @@
 + 线性筛素数 (prime_sieve.cpp)
 + 线性求逆元 (1_to_n_inverse.cpp)
 + 线性基 (basis.cpp)
++ 分解质因数 (factorize.cpp)
 
 ### 字符串 string
 
