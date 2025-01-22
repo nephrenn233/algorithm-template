@@ -15,6 +15,7 @@
 + 并查集 (disjoint_set_union.cpp)，支持查询集合、查询集合大小、合并
 + 线段树
     + 区间加，单点改 (segment_tree_1.cpp)
++ 稀疏表 (sparse_table.cpp, with Info)
 
 ### 数学 math
 
