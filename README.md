@@ -30,6 +30,7 @@
 
 + Manacher 算法 (manacher.cpp)
 + 字符串哈希 (string_hash.cpp)
++ Trie (trie.cpp)
 
 ### 图论 graph theory
 

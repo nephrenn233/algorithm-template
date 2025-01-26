@@ -1,48 +1,45 @@
-constexpr i64 inf = 1E18;
+namespace Trie {
+    constexpr int N = 3e6 + 10;
 
-constexpr int N = 1E6 + 10;
+    int trie[N][26];
+    int tot = 0;
+    bool exist[N];
 
-int trie[N][26];
-int tot;
-
-int newNode() {
-    tot++;
-    std::fill(trie[tot], trie[tot] + 26, 0);
-    val[tot] = inf;
-    return tot;
-}
-
-void solve() {
-    //* init
-    tot = 0;
-    newNode();
-
-    //* insert
-    for (int i = 0; i < N; i++) { 
-        int p = 1;
-        int l = S[i].size();
-        for (int j = 0; j < l; j++) {
-            int x = S[i][j] - 'a';
-            if (!trie[p][x]) {
-                trie[p][x] = newNode();
-            }
-            p = trie[p][x];
-            //* 处理
-            //* val[p] = std::min(val[p], l + K + f[(K - (l - j - 1) % K) % K]);
+    void clear() {
+        for (int i = 0; i <= tot; ++i) {
+            std::fill(trie[i], trie[i] + 26, 0);
         }
+        tot = 0;
+        std::fill(exist, exist + tot + 1, 0);
     }
-    
-    //* query
-    for (int i = 0; i < L; i++) {
-        int p = 1;
-        for (int j = i; j < L; j++) {
-            int x = T[j] - 'a';
-            p = trie[p][x];
-            if (!p) {
-                continue;
+
+    int new_node() {
+        ++tot;
+        std::fill(trie[tot], trie[tot] + 26, 0);
+        return tot;
+    }
+
+    void add(std::string s) {
+        int u = 0;
+        for (int i = 0; i < s.size(); ++i) {
+            int &v = trie[u][s[i] - 'a'];
+            if (v == 0) {
+                v = new_node();
             }
-            //* 处理
-            //* dp[j + 1] = std::min(dp[j + 1], dp[i] + val[p]);
+            u = v;
         }
+        exist[u] = 1;
     }
-}
+
+    bool is_exist(std::string s) {
+        int u = 0;
+        for (int i = 0; i < s.size(); ++i) {
+            int v = trie[u][s[i] - 'a'];
+            if (v == 0) {
+                return false;
+            }
+            u = v;
+        }
+        return exist[u];
+    }
+};
