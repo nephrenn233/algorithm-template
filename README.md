@@ -21,7 +21,7 @@
 
 + 组合数 (comb.cpp, with mod_int.cpp)
 + 卢卡斯定理 (lucas.cpp, with binom.cpp)
-+ 线性筛素数 (prime_sieve.cpp)
++ 线性筛素数 (linear_sieve.cpp)
 + 线性求逆元 (1_to_n_inverse.cpp)
 + 线性基 (basis.cpp)
 + 分解质因数 (factorize.cpp)
