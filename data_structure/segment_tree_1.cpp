@@ -31,6 +31,19 @@ struct segment_tree {
     void modify(int qp, const Info &qv) {
         modify(1, 0, n, qp, qv);
     }
+    void add(int u, int l, int r, int qp, const Info &qv) {
+        if (r - l == 1) {
+            tr[u] = tr[u] + qv;
+            return;
+        }
+        int mid = (l + r) / 2;
+        if (qp < mid) add(u * 2, l, mid, qp, qv);
+        else add(u * 2 + 1, mid, r, qp, qv);
+        pull(u);
+    }
+    void add(int qp, const Info &qv) {
+        add(1, 0, n, qp, qv);
+    }
     Info range_query(int u, int l, int r, int ql, int qr) {
         if (qr <= l || r <= ql) {
             return {};
