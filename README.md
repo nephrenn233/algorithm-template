@@ -1,6 +1,6 @@
 # algorithm-template
 
-自用算法竞赛模板，来源于到处抄。目前正在重构中。
+自用算法竞赛模板，来源于到处抄。
 
 附有 LaTeX 生成的 pdf 版本，使用 [ply-template](https://github.com/palayutm/ply-template) 模板生成。
 
@@ -35,7 +35,7 @@
 
 ### 杂项 various
 
-+ 取模类 (mod_int.cpp)
++ 取模类 (mod_int.cpp **or** mod_int.py)
 + 大整数类 (big_int.cpp)，支持高精加，高精减，高精乘，高精除，高精模
 + 对拍 (duipai.cpp)
 + 快速幂 (quick_pow.cpp)
