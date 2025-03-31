@@ -34,6 +34,8 @@
 
 ### 图论 graph theory
 
++ 树的直径 (tree_diameter.cpp)
+
 ### 杂项 various
 
 + 取模类 (mod_int.cpp **or** mod_int.py)
