@@ -46,3 +46,4 @@
     + 普通莫队 (mo.cpp)
 + 分数类 (frac.cpp)
 + 任意整数除法的上下取整 (ceil_floor_div.cpp)
++ 创建 n 维 vector，避免代码冗长 (make_ndvector.cpp)
